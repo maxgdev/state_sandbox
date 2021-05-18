@@ -26,4 +26,11 @@ class CounterBloc {
       _counter--;
     _inCounter.add(_counter);
   }
+
+  // Add to prevent memory leaks & following error :
+  // Close instances of 'dart.core.Sink'
+  void dispose() {
+    _counterStateController.close();
+    _counterEventController.close();
+  }
 }
