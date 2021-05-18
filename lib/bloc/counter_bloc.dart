@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:async/async.dart';
-import './counter_event.dart';
+import 'counter_event.dart';
 
 class CounterBloc {
   int _counter = 0;
