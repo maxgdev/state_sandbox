@@ -43,10 +43,11 @@ class _SetStateHomePageState extends State<SetStateHomePage> {
           children: <Widget>[
             Text(
             'The number now is :',
+            style: Theme.of(context).textTheme.headline4,
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline3,
             ),
           ],
         ),
