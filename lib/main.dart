@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       
       // home: SetStateHomePage(title: 'Flutter SetState Home Page'),
       // home: BlocHomePage(title: 'Flutter BloC Home Page'),
-      home: MobxHomePage(title: 'Flutter Mobx Home Page'),
+      home: MobxHomePage(),
        
     );
   }

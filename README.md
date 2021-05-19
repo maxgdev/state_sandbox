@@ -8,3 +8,4 @@ This repo is based on the following:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Flutter BLoC Pattern Tutorial From Scratch] (https://www.youtube.com/watch?v=oxeYeMHVLII)
+- [FLUTTER MobX counter example | State management | Observer](https://www.youtube.com/watch?v=rhFLRvFE_qo)
