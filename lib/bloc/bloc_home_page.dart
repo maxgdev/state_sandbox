@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:state_sandbox/bloc/counter_bloc.dart';
 import 'package:state_sandbox/bloc/counter_event.dart';
@@ -23,24 +25,23 @@ class _BlocHomePageState extends State<BlocHomePage> {
       ),
       body: Center(
         child: StreamBuilder(
-          stream: _bloc.counter,
-          initialData: 0,
-          builder: (BuildContext context, AsyncSnapshot<int> snapshot) {
-            return Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  'The number now is :',
-                  style: Theme.of(context).textTheme.headline4,
-                ),
-                Text(
-                  '${snapshot.data}',
-                  style: Theme.of(context).textTheme.headline3,
-                ),
-              ],
-            );
-          }
-        ),
+            stream: _bloc.counter,
+            initialData: 0,
+            builder: (BuildContext context, AsyncSnapshot<int> snapshot) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'The number now is :',
+                    style: Theme.of(context).textTheme.headline4,
+                  ),
+                  Text(
+                    '${snapshot.data}',
+                    style: Theme.of(context).textTheme.headline3,
+                  ),
+                ],
+              );
+            }),
       ),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -61,5 +62,11 @@ class _BlocHomePageState extends State<BlocHomePage> {
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _bloc.dispose();
   }
 }
